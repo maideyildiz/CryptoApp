@@ -6,7 +6,7 @@ function Portfolio() {
     return (
         <View>
             <Text>
-               portfolio
+            Portföy
             </Text>
         </View>
     )
