@@ -15,7 +15,7 @@ const BottomTabStackScreen = () => (
     <BottomTabStack.Screen
       name="Home"
       component={Home}
-      options={{ title: "Anasayfa" }}
+      options={{ title: "Kripto Paralar" }}
     />
     <BottomTabStack.Screen
       name="Portfolio"
