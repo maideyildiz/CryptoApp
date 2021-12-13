@@ -1,33 +1,27 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import Login from "./Login";
 import Home from "./Home";
-import Portfolio from "./Portfolio";
 import Profile from "./Profile";
 
 const AuthStack = createStackNavigator();
-const BottomTabStack = createBottomTabNavigator();
-const BottomTabStackScreen = () => (
-  <BottomTabStack.Navigator>
-    <BottomTabStack.Screen
+const DrawerStack = createDrawerNavigator();
+const DrawerStackScreen = () => (
+  <DrawerStack.Navigator>
+    <DrawerStack.Screen
       name="Home"
       component={Home}
       options={{ title: "Kripto Paralar" }}
     />
-    <BottomTabStack.Screen
-      name="Portfolio"
-      component={Portfolio}
-      options={{ title: "Portföy" }}
-    />
-    <BottomTabStack.Screen
+    <DrawerStack.Screen
       name="Profile"
       component={Profile}
       options={{ title: "Profil" }}
     />
-  </BottomTabStack.Navigator>
+  </DrawerStack.Navigator>
 );
 function Landing() {
   return (
@@ -45,7 +39,7 @@ function Landing() {
         />
         <AuthStack.Screen
           name="Home"
-          component={BottomTabStackScreen}
+          component={DrawerStackScreen}
           options={{ title: "Anasayfa" }}
         />
       </AuthStack.Navigator>
